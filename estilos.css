@@ -1,0 +1,90 @@
+/* --- Estilos Gerais (Reset e Padrões) --- */
+body {
+background-color: #eef2f7; /* Um cinza bem clarinho para o fundo */
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+display: flex; /* Usamos flex para centralizar o cartão facilmente */
+justify-content: center;
+align-items: center;
+min-height: 100vh; /* Garante que o corpo ocupe a altura toda da tela */
+margin: 0;
+}
+
+/* --- Estilo do Cartão (Visão Mobile) --- */
+.cartao {
+background-color: white;
+width: 90%; /* Ocupa 90% da largura da tela, mas... */
+max-width: 400px; /* ...não passa de 400px de largura. */
+border-radius: 15px; /* Bordas arredondadas */
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Sombra suave para um efeito 3D */
+padding: 25px;
+text-align: center; /* Centraliza todo o texto dentro do cartão */
+
+/* Flexbox para a visão mobile! */
+display: flex;
+
+flex-direction: column; /* Organiza os itens em uma coluna (um embaixo do outro) */
+align-items: center; /* Centraliza os itens no eixo horizontal */
+}
+
+.foto-perfil {
+width: 180px;
+height: 180px;
+border-radius: 50%; /* Deixa a imagem perfeitamente redonda */
+border: 5px solid #ff00dd; /* Borda azul em volta da foto */
+margin-bottom: 20px; /* Espaço entre a foto e o texto */
+}
+
+.nome {
+margin: 0;
+font-size: 1.8em;
+color: #2c3e50;
+}
+
+.cargo {
+margin: 5px 0;
+font-size: 1.1em;
+color: #ff00dd; /* Azul */
+font-weight: bold;
+}
+
+.descricao {
+
+font-size: 1em;
+color: #555; /* Cinza escuro para o texto */
+}
+
+/* --- Media Query para Telas Maiores --- */
+
+/* Este bloco de código SÓ será aplicado se a largura da tela for de 600px OU MAIS. */
+@media (min-width: 800px) {
+
+.cartao {
+/* A GRANDE MUDANÇA: mudamos a direção do flexbox para linha! */
+flex-direction: row; /* Itens agora ficam lado a lado */
+
+max-width: 700px; /* O cartão pode ser um pouco maior em telas grandes */
+text-align: left; /* O texto agora se alinha à esquerda */
+align-items: center; /* Alinha a foto e o texto verticalmente ao centro */
+}
+
+.foto-perfil {
+margin-bottom: 0; /* Remove a margem de baixo da foto */
+margin-right: 25px; /* Adiciona uma margem à direita para separar da foto */
+
+}
+}
+
+.botao {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #ff00dd;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.botao:hover {
+    background-color: #ff00dd;
+}
